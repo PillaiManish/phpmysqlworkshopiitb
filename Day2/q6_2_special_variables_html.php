@@ -5,7 +5,7 @@
 </head>
 <body>
 	<h1> Form </h1>
-	<form method="POST" action="special1.php">
+	<form method="POST" action="q6_2_special_variables_html.php">
 		<input type="text" name="name" placeholder="Enter Name">
 		<br>
 		<input type="text" name="sub_1" placeholder="Enter Marks of Subject">

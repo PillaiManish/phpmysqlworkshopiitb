@@ -4,7 +4,7 @@
 	<title></title>
 </head>
 <body>
-	<form method = "GET" action = "special2.php">
+	<form method = "GET" action = "q6_1_special_variables_html.php">
 		<input type = 'text' name = 'side1' placeholder="Enter Side">
 		<br>
 		<input type = 'text' name = 'side2' placeholder="Enter Side">
