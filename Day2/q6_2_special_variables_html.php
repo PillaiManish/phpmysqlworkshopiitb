@@ -18,13 +18,13 @@
 		<br>
 		<input type="text" name="sub_5" placeholder="Enter Marks of Subject">
 		<br>
-		<input type="submit" value="Submit">
+		<input type="submit" value="Submit" name="submit">
 		<br>
 	
 	</form>
 
 	<?php
-	if ($_SERVER["REQUEST_METHOD"] == "POST"){
+	if (isset($_POST['submit'])){
 
 		$name	=	$_POST['name'];
 		$sub1 	=	$_POST['sub_1'];
