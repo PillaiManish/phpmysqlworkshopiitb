@@ -5,33 +5,31 @@
 </head>
 <body>
 	<form method = "POST" action = "q3_file_upload.php" enctype="multipart/form-data">
-		<input type = "file" name = "file">
+		<input type = "file" name = "fileName">
 		<input type = "submit" name = "submit" value = "submit">
 	</form>
 
 
-	<?php
-		if(isset($_POST['submit'])){
-			$name 		=	$_FILES['file']['name'];
-			$type		=	$_FILES['file']['type'];
-			$size		=	$_FILES['file']['size'];
-			$temp 		=	$_FILES['file']['tmp_name'];
-			$error		=	$_FILES['file']['error'];
+ <?php
 
-			if ($error>0)
-				die("Error uploading file! Error $error");
-			else{
-				$uploaddir = '/uploads/';
-    			$uploadfile = $uploaddir . basename($_FILES['file']['name']);
+if(isset($_POST['submit']))
+{
+    $fileName = $_FILES['fileName']['name'];
+    $tempName = $_FILES['fileName']['tmp_name'];
+    
+    if(isset($fileName))
+    {
+        if(!empty($fileName))
+        {
+            $location = "uploads/";
+            if(move_uploaded_file($tempName, $location.$fileName))
+            {
+                echo 'File Uploaded';
+            }
+        }
+    }
+}
 
-				move_uploaded_file($temp,$uploadfile);
-				echo "Upload is succesful";
-			}
-
-		}
-
-
-
-	?>
+?>
 </body>
 </html>
