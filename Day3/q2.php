@@ -19,7 +19,11 @@
 
 
 
+	$select_query = "SELECT * FROM class1 where name = 'Rohan'";
 
+	$execute_query = mysqli_query($conn,$select_query);
+
+	$detail = $execute_query-> fetch_array(MYSQLI_ASSOC);
 
 
 	if (mysqli_num_rows($execute_query)>0){
