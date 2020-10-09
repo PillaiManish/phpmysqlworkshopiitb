@@ -8,10 +8,7 @@
 		<input type = "file" name = "fileName">
 		<input type = "submit" name = "submit" value = "submit">
 	</form>
-
-
  <?php
-
 if(isset($_POST['submit']))
 {
     $fileName = $_FILES['fileName']['name'];
@@ -29,7 +26,6 @@ if(isset($_POST['submit']))
         }
     }
 }
-
 ?>
 </body>
 </html>
